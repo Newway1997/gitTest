@@ -18,7 +18,6 @@
   "description": "",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run check-keyword",
       "pre-push":"npm run check-keyword"
     }
   }
