@@ -8,7 +8,7 @@ const red='\x1B[31m%s\x1B[0m'
 const branchReg = /(master|hotfix|main)/g;
 if (branchReg.test(branch)) {
   console.log(blue,"当前分支" + branch);
-  const result = execSync("git diff --name-only --cached", {
+  const result = execSync(`git diff --name-only ${branch} origin/${branch}`, {
     encoding: "utf-8",
   });
   const fileArr = result.split("\n");
